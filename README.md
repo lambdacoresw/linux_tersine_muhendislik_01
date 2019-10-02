@@ -26,3 +26,87 @@ Linux programımız ekrana bir mesaj iletip çalışmasını sonlandıracaktır.
 ##  dlroW olleH
 Bir programa tersine-mühendislik uygulamadan önce dosyamız hakkında bilgi almak iyi olur. _file_ komutu ile başlayalım:
 ![2.png](2.png)
+
+Komut çıktısında, programımızın 32-bit ELF dosyası olduğunu öğrendik. ELF dosyaları, Linux sistemlerdeki yerel çalıştırılabilir dosya biçimidir. Yani Linux 'un kendi çalıştırılabilir dosya formatı.
+
+Bir sonraki adımda, programımız içersinde geçen _karakter katarları(strings)_ hakkında bilgi alalım. Gerekli komut aşağıda:
+![3.png](3.png)
+
+Komut çıktımız aşağıdaki gibi olacaktır(versiyon bilgilerinde farklılıklar olabilir):
+```bash
+/lib/ld-linux.so.2
+libc.so.6
+_ IO_stdin_used
+puts
+__ libc_start_main
+__ gmon_start__
+GLIBC_2.0
+PTRh
+UWVS
+t$,U
+[^_ ]
+hello world!
+;* 2$"(
+GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.10) 5.4.0 20160609
+crtstuff.c
+__ JCR_LIST__
+deregister_tm_clones
+__ do_global_dtors_aux
+completed.7209
+__ do_global_dtors_aux_fini_array_entry
+frame_dummy
+__ frame_dummy_init_array_entry
+hello.c
+__ FRAME_END__
+__ JCR_END__
+__ init_array_end
+_ DYNAMIC
+__ init_array_start
+__ GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__ libc_csu_fini
+_ ITM_deregisterTMCloneTable
+__ x86.get_pc_thunk.bx
+_ edata
+__ data_start
+puts@@GLIBC_2.0
+__ gmon_start__
+__ dso_handle
+_ IO_stdin_used
+__ libc_start_main@@GLIBC_2.0
+__ libc_csu_init
+_ fp_hw
+__ bss_start
+main
+_ Jv_RegisterClasses
+__ TMC_END__
+_ ITM_registerTMCloneTable
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rel.dyn
+.rel.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.dynamic
+.got.plt
+.data
+.bss
+.comment
+```
