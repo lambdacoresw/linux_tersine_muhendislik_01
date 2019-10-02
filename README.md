@@ -128,3 +128,40 @@ objdump -d hello > hello_disassembly.asm
 _hello_disassembly.asm_ dosyasının içeriği aşağıdaki gibi görünecektir:
 ![4.png](4.png)
 
+Dosyada görülen _assembly_ yazım biçimi AT&T biçimidir. INTEL yazım biçimi için şu komut işinizi görecektir:
+```bash
+objdump -M intel -d hello > hello_disassembly.asm
+```
+
+Sonuç, program içerisindeki her bir fonksiyonun kodunu göstermektedir. Kısaca, programımızn çalıştırılabilir bölümünde yaklaşık 15 adet fonksiyon bulunmakta.
+
+```bash
+Disassembly of section .init:
+080482a8 <_ init>:
+
+Disassembly of section .plt:
+080482d0 <puts@plt-0x10>:
+080482e0 <puts@plt>:
+080482f0 <__libc_start_main@plt>:
+
+Disassembly of section .plt.got:
+08048300 <.plt.got>:
+
+Disassembly of section .text:
+08048310 <_ start>:
+08048340 <__ x86.get_pc_thunk.bx>:
+08048350 <deregister_tm_clones>:
+08048380 <register_tm_clones>:
+080483c0 <__ do_global_dtors_aux>:
+080483e0 <frame_dummy>:
+0804840b <main>:
+08048440 <__libc_csu_init>:
+080484a0 <__libc_csu_fini>:
+
+Disassembly of section .fini:
+080484a4 <_ fini>:
+```
+
+Kodun tersine çevrilmiş hali genellikle `.text` bölümünde bulunmaktadır.
+
+Kodu incelerken GCC derleyicisi tarafından üretilmiş ve şimdilik sadece işlemciyi ilgilendiren bölümü geçip bizi asıl ilgilendiren `main` fonksiyonumuza gelelim. 
