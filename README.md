@@ -1,6 +1,6 @@
 # Linux İşletim Sistemi Üzerinde Tersine Mühendislik
 
-Bu yazı, [Reverse Engineering a Linux executable – hello world](https://www.codementor.io/packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d) adresinin Türkçe diline çevirisini içermektedir. Hatalar veya katkı için iletişime geçebilirsiniz.
+Bu yazı, [Reverse Engineering a Linux executable – hello world](https://www.codementor.io/packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d) adresinin Türkçe diline çevirisini içermektedir. Hatalar veya katkı için iletişime geçebilirsiniz. Yazıda anlatılanlara hakim olmak için temel seviyede Linux işletim sistemi kullanımı ve C programlama dili bilgisi gerekmektedir.
 
 Başlamak için küçük bir program yazacağız. Ama başlamadan önce bize gerekli araçların sistemimizde yüklü olduklarından emin olmamız gerek. Bir terminal açın ve aşağıdaki kodu girin. Bu kod ile sistemimize eğer yüklü değilse GCC derleyici araç takımını kurmuş olacağız. Eğer önceden yüklemişseniz, zaten kurulu olduğunu söyleyen bir yanıt alacaksanız. Tabi bu komutu çalıştırabilmek için yönetici izinlerine sahip olmalısınız. 
 
@@ -18,21 +18,11 @@ void main(void)
 }
 ```
 
-Programı derleyip, çalıştırılabilir bir hale getirmek için ise yine terminal üzerinde şu komutu kullanın:
+Programı derleyip, çalıştırmak için aşağıda gördüğünüz komutları girin:
+![1.png](1.png)
 
-```bash
-gcc main.c -o main
-```
+Linux programımız ekrana bir mesaj iletip çalışmasını sonlandıracaktır.
 
-Son adımda ise programı çalıştırıp, sonucu görelim:
-
-```bash
-./hello
-```
-
-Terminal ekranında `hello world!` yazısını görmelisiniz. 
-
-Programımızı hazırladıktan sonra tersine mühendislik işlemlerine geçebiliriz.
-
-### dlroW olleH
-
+##  dlroW olleH
+Bir programa tersine-mühendislik uygulamadan önce dosyamız hakkında bilgi almak iyi olur. _file_ komutu ile başlayalım:
+![2.png](2.png)
