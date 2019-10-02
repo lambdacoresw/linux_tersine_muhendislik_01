@@ -110,3 +110,21 @@ _ ITM_registerTMCloneTable
 .bss
 .comment
 ```
+Karakter katarları, dosyanın başından itibaren sırası ile listelendiler. Listenin başlarında, bizim programımız içerisinde ekrana yazdırdığımız mesajı ve derleyici hakkında bazı bilgileri görebilirsiniz. En baştaki ilk iki satır, programın kullandığı kütüphane dosyasını işaret ediyor.
+
+```bash
+/lib/ld-linux.so.2
+libc.so.6
+```
+
+Listenin son kısımları ise dosya içerisindeki bölümlerin isimlerini gösteriyor. Yukarıdaki tüm liste içerisine biz sadece birkaç bilgi ekledik. Geri kalan tüm satırlar, derleyici tarafından otomatik olarak eklendi.
+
+Linux üzerinde tersine-mühendislik işlemleri bir komut uzağımızda. `objdump` komutunu `-d` parametresi ile kullandığımızda, terminal ekranımız çalıştırılabilir dosyamızın _assembly_ komutları ile dolacaktır (_assembly_ hakkında geniş bilgi almak için arama motorlarını kullanarak internet üzerinde bir gezintiye çıkabilirsiniz). Eğer sonuçları bir dosyaya kaydedip detaylı bir şekilde incelemek isterseniz şöyle yapabilirsiniz:
+
+```bash
+objdump -d hello > hello_disassembly.asm
+```
+
+_hello_disassembly.asm_ dosyasının içeriği aşağıdaki gibi görünecektir:
+![4.png](4.png)
+
