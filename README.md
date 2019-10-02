@@ -1,4 +1,4 @@
-# Linux İşletim Sistemi Üzerinde Tersine Mühendislik
+# Linux İşletim Sistemi Üzerinde Tersine Mühendislik #TAMAMLANMADI#
 
 Bu yazı, [Reverse Engineering a Linux executable – hello world](https://www.codementor.io/packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d) adresinin Türkçe diline çevirisini içermektedir. Hatalar veya katkı için iletişime geçebilirsiniz. Yazıda anlatılanlara hakim olmak için temel seviyede Linux işletim sistemi kullanımı ve C programlama dili bilgisi gerekmektedir.
 
